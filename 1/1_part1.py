@@ -1,4 +1,4 @@
-with open('input.txt') as file:
+with open("input.txt") as file:
     lines = []
     for line in file:
         try:
