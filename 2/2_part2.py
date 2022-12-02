@@ -5,51 +5,54 @@
 # Y = Paper
 # Z = Scissors
 
+
 def get_weapon(letter):
-    if letter == 'A' or letter == 'X':
-        return 'Rock'
-    elif letter == 'B' or letter == 'Y':
-        return 'Paper'
-    elif letter == 'C' or letter == 'Z':
-        return 'Scissors'
+    if letter == "A" or letter == "X":
+        return "Rock"
+    elif letter == "B" or letter == "Y":
+        return "Paper"
+    elif letter == "C" or letter == "Z":
+        return "Scissors"
+
+
 def get_points(opponent, outcome):
     base_points = 0
 
     opponent = get_weapon(opponent)
-    if outcome == 'X':
-        if opponent == 'Rock':
-            you = 'Scissors'
-        elif opponent == 'Paper':
-            you = 'Rock'
-        elif opponent == 'Scissors':
-            you = 'Paper'
-    elif outcome == 'Y':
+    if outcome == "X":
+        if opponent == "Rock":
+            you = "Scissors"
+        elif opponent == "Paper":
+            you = "Rock"
+        elif opponent == "Scissors":
+            you = "Paper"
+    elif outcome == "Y":
         you = opponent
-    elif outcome == 'Z':
-        if opponent == 'Rock':
-            you = 'Paper'
-        elif opponent == 'Paper':
-            you = 'Scissors'
-        elif opponent == 'Scissors':
-            you = 'Rock'
+    elif outcome == "Z":
+        if opponent == "Rock":
+            you = "Paper"
+        elif opponent == "Paper":
+            you = "Scissors"
+        elif opponent == "Scissors":
+            you = "Rock"
 
-    if you == 'Rock':
+    if you == "Rock":
         base_points += 1
-    elif you == 'Paper':
+    elif you == "Paper":
         base_points += 2
-    elif you == 'Scissors':
+    elif you == "Scissors":
         base_points += 3
 
-
-    if opponent == 'Rock' and you =='Paper':
+    if opponent == "Rock" and you == "Paper":
         base_points += 6
-    elif opponent == 'Paper' and you == 'Scissors':
+    elif opponent == "Paper" and you == "Scissors":
         base_points += 6
-    elif opponent == 'Scissors' and you == 'Rock':
+    elif opponent == "Scissors" and you == "Rock":
         base_points += 6
     elif opponent == you:
         base_points += 3
     return base_points
+
 
 total_points = 0
 with open("input.txt") as file:
