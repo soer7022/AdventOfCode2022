@@ -18,6 +18,7 @@ except FileExistsError:
 
 Path(f"{day_no}/{day_no}_part1.py").touch()
 Path(f"{day_no}/{day_no}_part2.py").touch()
+Path(f"{day_no}/example.txt").touch()
 
 import os
 
